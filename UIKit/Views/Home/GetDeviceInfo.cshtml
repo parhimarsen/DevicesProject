@@ -1,0 +1,40 @@
+﻿@model UIKit.Models.Device
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/assets/css/MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="formDeviceResult">
+        <table>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Info)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsOnlineOffline)
+                </th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => Model.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => Model.Info)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => Model.IsOnlineOffline)
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>
+

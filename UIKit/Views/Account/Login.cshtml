@@ -1,0 +1,48 @@
+﻿@using UIKit.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<div class="page-header clear-filter" filter-color="orange" style="background: rgba(44, 44, 44, 0.4)!important;">
+    <div class="page-header-image" style="background-image:url(~/assets/img/login.jpg)"></div>
+    <div class="content">
+        <div class="container">
+            <div class="col-md-4 ml-auto mr-auto">
+                <div class="card card-login card-plain">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="card-header text-center">
+                            <div class="logo-container">
+                                <img src="~/assets/img/now-logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group no-border input-lg">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email..." })
+                            </div>
+                            <div class="input-group no-border input-lg">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password..." })
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <input type="submit" value="Log in" class="btn btn-primary btn-round btn-lg btn-block" />
+                            <div class="pull-left">
+                                <h6>
+                                    @Html.ActionLink("Create Account", "Register", new { @class = "link" })
+                                </h6>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

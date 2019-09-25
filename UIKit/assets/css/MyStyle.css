@@ -1,0 +1,60 @@
+﻿.description {
+    color: rgb(33, 32, 32);
+    font-weight: 500;
+}
+
+p {
+    font-weight: 500;
+}
+
+.bg-primary {
+    background-color: rgb(82, 131, 255) !important;
+}
+
+@media screen and (max-width: 991px) {
+    .sidebar-collapse .navbar-collapse:before {
+        background: #f96332;
+        background: linear-gradient( rgb(72, 0, 135) 0%, rgb(0, 9, 171) 80%) !important;
+    }
+}
+
+.devices {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+    .devices div {
+        color: white;
+        font-size: 2rem;
+        min-width: 350px;
+        margin: 15px;
+        padding: 2em;
+        text-align: center;
+        background-color: blue;
+    }
+
+.plus {
+    background-image: url(../img/plus.jpg);
+    background-size: 100%;
+}
+
+.deviceResult {
+    position: absolute;
+    width: 700px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 30%;
+
+}
+
+.formDeviceResult {
+    width: 700px;
+    height: auto;
+    background: #fff !important;
+    border-radius: 10px !important;
+}
+
+
